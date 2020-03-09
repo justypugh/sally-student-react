@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React Sally Student</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div id="application-root"></div>
@@ -18,8 +19,62 @@
     src="https://unpkg.com/babel-standalone@6/babel.min.js">
   </script>
 
-  <script>
-      
+  <script type="text/babel">
+      function App(props) {
+          console.log(props);
+          return (
+            <body>
+                {props.children}    
+            </body>
+        );  
+      }
+
+      ReactDOM.render(
+        <App> 
+            <header>
+                <address>
+                    <h1>Sally Student</h1>
+                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDKDS9AAU-Y7UBymi_qZ1PVNA1ZTVyf6WChtY2KrlkV-pKHjqS&s' alt='A professional Image of Sally'/>   
+                    <ul>
+                        <li>Email: <a href="mailto:sally@studentresume.com" target="_blank">sally@studentresume.com</a></li>
+                        <li>Phone: 909-867-5309</li>
+                    </ul>   
+                </address>    
+            </header>
+
+            <main>
+                <section>
+                    <header>
+                        <h2>Education</h2>    
+                    </header>   
+                    <ul>
+                        <li>Harvard University</li>    
+                    </ul> 
+                </section>  
+                
+                <section>
+                    <header>
+                        <h2>Employment</h2>    
+                    </header>
+                    <p>Hollister</p>
+                    <ul>
+                        <li>Position: Accessory Expert</li>
+                        <li>Dates of Employment: 12/01/2000 - 12/01/2013</li>
+                        <li>Job Description: Scuppers overhaul driver lookout come about. Spanker matey jib spyglass red ensign. Admiral of the Black run a rig draft keelhaul holystone. Privateer interloper Blimey spirits bring a spring upon her cable.</li>    
+                    </ul>   
+                    
+                    <p>Starbucks</p>
+                    <ul>
+                        <li>Position: Barista</li>
+                        <li>Dates of Employment: 12/01/2013 - 12/01/2019</li>
+                        <li>Job Description: Scuppers overhaul driver lookout come about. Spanker matey jib spyglass red ensign. Admiral of the Black run a rig draft keelhaul holystone. Privateer interloper Blimey spirits bring a spring upon her cable.</li>    
+                    </ul>
+                </section>
+            </main>
+            <footer>Sally A. Student 2020</footer>
+        </App>,
+        document.querySelector("#application-root")
+      );
   </script>
     
 </body>
